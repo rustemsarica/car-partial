@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Car</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<body>
+    <style>
+        .car-partial-selector {
+            max-width: 1140px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .car-partial-selector svg {
+            width: 100%;
+            height: auto;
+        }
+        .car-part {
+            position: absolute;
+            z-index: 2;
+        }
+        .car-part div {
+            font-family: 'Open Sans';
+            display: inline-block;
+            background: #1094F6;
+            color: #fff;
+            padding: 8px 16px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+        #car-partial-selector path {
+            cursor: pointer;
+            fill: #222;
+        }
+        #car-partial-selector path:hover {
+            fill: #1094F6;
+        }
+    </style>
+   
+    <div class="container">                         
+        <div class="m-auto my-2 row field-car-partials fieldcar" id="car-partials" style="border: 1px solid rgb(226, 226, 226);">
+                
+                    <div class="col-md-5 fieldcar">
+                        <div class="car-part"></div>
+                        <div class="car-partial-selector fieldcar">
+                            <svg class="fieldcar" id="car-selector" width="210mm" height="297mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 18500 26000" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                  <style type="text/css">            
+                                      .str0 {stroke:#C5C6C6;stroke-width:35.28;stroke-miterlimit:22.9256}
+                                      .str1 {stroke:#288089;stroke-width:35.28;stroke-miterlimit:22.9256}
+                                      .str2 {stroke:#990e0e;stroke-width:35.28;stroke-miterlimit:22.9256}
+    
+                                      .fil0 {fill:#D9DADA;fill-rule:nonzero}
+                                      .fil1{fill:#288089;fill-rule:nonzero}
+                                      .fil2{fill:#990e0e;fill-rule:nonzero}
+                                      .fil3 {fill:#C5C6C6;fill-rule:nonzero}
+                                      .fil4 {fill:#FEFEFE;fill-rule:nonzero}
+                                                         
+                                    </style>
+                                </defs>
+                                <g class="fieldcar" transform="matrix(1, 0, 0, 1, -5599.996582, 5787.134277)">
+                                  <path class="fil0 str0 fieldcar" d="M 12868.554 15902.888 L 16448.923 16594.409 C 16448.923 16594.409 16990.973 15680.638 16990.973 14544.768 L 16990.973 11976.757 C 16990.973 10742.298 16475.453 10030.137 16448.923 10026.047 L 12843.994 10692.828 C 12843.994 10692.828 12621.204 11532.407 12621.204 11976.757 L 12621.204 14544.768 C 12621.204 14989.288 12868.554 15902.888 12868.554 15902.888 Z" transform="matrix(0, 1.000012, -0.999988, 0, 28116.150882, -1496.044426)"/>
+                                  <path id="on-cam" class="fil4 str0 fieldcar" d="M 16216.578 1220.345 C 16216.578 1220.345 16068.528 2083.774 16068.528 2482.684 L 16068.528 5072.265 C 16068.528 5615.545 16216.578 6455.135 16216.578 6455.135 L 13670.749 7072.616 C 13670.749 7072.616 13444.899 5961.835 13444.899 5418.025 C 13451.569 4825.095 13475.779 2702.484 13481.919 2158.674 C 13457.189 1615.385 13670.669 553.554 13670.669 553.554 L 16216.578 1220.345 Z" transform="matrix(0, 1.000012, -0.999988, 0, 18643.776512, -11017.837639)"/>
+                                  <path id="arka-cam" class="fil4 str0 fieldcar" d="M 13312.531 11631.504 L 13312.531 14174.785 C 13312.531 14520.545 13435.321 15187.326 13435.321 15187.326 C 13435.321 15187.326 15089.56 15656.405 15608.809 15656.405 L 16349.09 15656.405 L 16349.09 10174.634 L 15510.569 10174.624 C 15065 10174.624 13459.881 10643.875 13459.881 10643.875 C 13459.881 10643.875 13312.531 11543.184 13312.531 11631.504 Z" transform="matrix(0, 1.000012, -0.999988, 0, 27746.165053, -1915.479791)"/>
+                                  <path data-name="Kaput" id="kaput" class="fil0 str0 fieldcar" d="M 17496.282 3247.035 L 12436.784 3247.035 L 12165.195 1468.944 L 12165.195 -1469.377 L 12412.114 -3272.026 L 17496.202 -3272.026 C 17496.202 -3272.026 16755.393 -1889.167 16755.393 -1321.317 L 16755.393 1246.694 C 16755.393 1962.763 17496.282 3247.035 17496.282 3247.035 Z" transform="matrix(0, 1.000012, -0.999988, 0, 14818.243075, -14843.417534)"/>
+                                  <path data-name="Arka Tampon" id="arka-tampon" class="fil0 str0 fieldcar" d="M 13650.101 15232.653 L 13650.101 16516.583 L 14835.961 16516.573 L 14835.961 15059.691 L 14392.131 14812.871 L 13650.101 15232.653 Z M 13650.101 21010.72 L 14835.961 21010.72 L 14835.961 22394.11 L 14416.701 22639.701 L 13650.111 22318.681 L 13650.101 21010.72 Z M 13650.101 16516.583 L 13650.101 21010.73 M 14835.961 16516.573 L 14835.961 21010.73 M 14841.231 15076.691 C 14841.231 15076.691 14914.901 14854.441 15162.251 14854.441 C 15407.84 14854.441 15407.84 15002.671 15407.84 15002.671 L 15407.84 22434.45 C 15407.84 22434.45 15383.29 22608.131 15162.251 22608.131 C 14939.471 22608.131 14841.231 22434.45 14841.231 22434.45 M 15432.41 15076.701 C 15432.41 15076.701 16049.888 15051.971 16049.888 15447.193 L 16049.888 21966.081 C 16049.888 22360.78 15407.84 22409.91 15407.84 22409.91 M 15777.248 15496.493 L 15752.558 15496.493 C 15677.558 15496.493 15616.738 15545.863 15616.738 15606.733 L 15616.748 16003.563 C 15616.738 16064.422 15677.558 16113.792 15752.548 16113.792 L 15777.248 16113.802 C 15852.229 16113.792 15913.049 16064.422 15913.049 16003.553 L 15913.059 15606.733 C 15913.049 15545.863 15852.229 15496.493 15777.228 15496.493 L 15777.248 15496.493 Z M 15777.258 21412.96 L 15752.568 21412.96 C 15677.568 21412.96 15616.748 21462.33 15616.748 21523.2 L 15616.768 21920.031 C 15616.748 21980.891 15677.568 22030.261 15752.568 22030.261 L 15777.258 22030.271 C 15852.239 22030.261 15913.059 21980.891 15913.059 21920.021 L 15913.069 21523.21 C 15913.059 21462.33 15852.239 21412.96 15777.248 21412.96 L 15777.258 21412.96 Z" transform="matrix(0, 1.000012, -0.999988, 0, 33576.048083, 3876.107862)"/>
+                                  <path data-name="Ön Tampon" id="on-tampon" class="fil0 str0 fieldcar" d="M 15879.575 -6042.978 L 15904.303 -7648.336 C 15904.303 -7648.336 16002.983 -8068.237 15459.842 -8092.797 C 14916.668 -8117.537 14990.682 -8043.507 14990.682 -8043.507 L 15015.409 -758.912 L 15509.128 -758.912 C 16002.983 -758.912 15904.303 -1153.622 15904.303 -1153.622 L 15904.303 -2832.684 L 15879.575 -6042.978 Z M 15016.639 -7705.569 L 15880.795 -7705.569 M 15031.549 -1139.602 L 15895.703 -1139.602 M 15004.35 -6672.181 L 15868.335 -6672.181 M 15053.646 -2113.88 L 15917.802 -2113.88 M 15053.646 -1629.296 L 15053.646 -2086.133 L 15448.785 -2086.133 L 15843.79 -2086.133 L 15843.79 -1629.286 L 15843.79 -1172.922 L 15448.785 -1172.932 L 15053.646 -1172.932 L 15053.646 -1629.296 Z M 15053.646 -7185.915 L 15053.646 -7667.48 L 15448.785 -7667.48 L 15843.79 -7667.48 L 15843.79 -7185.915 L 15843.79 -6704.281 L 15448.785 -6704.281 L 15053.646 -6704.281 L 15053.646 -7185.915 Z M 14992.082 -8087.717 C 14992.082 -8087.717 14917.898 -8309.979 14671.13 -8309.979 C 14424.165 -8309.979 14424.165 -8161.747 14424.165 -8161.747 L 14424.165 -729.102 C 14424.165 -729.102 14448.892 -555.298 14671.13 -555.298 C 14893.153 -555.298 14992.082 -729.102 14992.082 -729.102 M 14399.43 -8087.707 C 14399.43 -8087.707 13782.2 -8112.447 13782.2 -7717.35 L 13782.2 -1197.472 C 13782.2 -802.772 14424.165 -753.652 14424.165 -753.652 M 14090.942 -7667.82 L 14115.619 -7667.82 C 14190.623 -7667.82 14251.426 -7618.433 14251.426 -7557.555 L 14251.416 -7160.724 C 14251.426 -7099.864 14190.623 -7050.494 14115.629 -7050.494 L 14090.942 -7050.484 C 14015.961 -7050.494 13955.15 -7099.864 13955.15 -7160.734 L 13955.14 -7557.555 C 13955.15 -7618.433 14015.961 -7667.82 14090.942 -7667.82 Z M 14090.932 -1750.686 L 14115.619 -1750.686 C 14190.614 -1750.686 14251.426 -1701.326 14251.426 -1640.456 L 14251.406 -1243.522 C 14251.426 -1182.662 14190.614 -1133.292 14115.619 -1133.292 L 14090.932 -1133.282 C 14015.951 -1133.292 13955.14 -1182.662 13955.14 -1243.532 L 13955.14 -1640.446 C 13955.14 -1701.326 14015.951 -1750.686 14090.942 -1750.686 L 14090.932 -1750.686 Z" transform="matrix(0, 1.000012, -0.999988, 0, 10417.417754, -19282.823291)"/>
+                                  <path data-name="Tavan" id="tavan" class="fil0 str0 fieldcar" d="M 11793.285 10829.176 C 11793.285 10829.176 11645.236 9989.585 11645.236 9446.305 L 11645.236 6856.725 C 11645.236 6457.815 11793.285 5594.384 11793.285 5594.384 C 11793.285 5594.384 13447.704 5693.144 14460.065 5693.144 C 16336.723 5693.144 17942.372 5594.384 17942.372 5594.384 C 17942.372 5594.384 17719.583 6433.965 17719.583 6878.315 L 17719.583 9446.325 C 17719.583 9890.845 17966.932 10804.446 17966.932 10804.446 C 17966.932 10804.446 16609.153 10705.675 14460.055 10705.675 C 13250.164 10705.675 11793.285 10829.176 11793.285 10829.176 Z" transform="matrix(0, 1.000012, -0.999988, 0, 23017.76195, -6594.487785)"/>
+                                  <path data-name="Bagaj Kapağı" id="bagaj-kapagi" class="fil0 str0 fieldcar" d="M 13732.502 12742.504 C 13732.502 12742.504 14274.55 13458.765 14274.55 14693.224 L 14274.55 17261.235 C 14274.55 18397.106 13732.502 19310.866 13732.502 19310.866 L 15634.08 19286.126 C 15634.08 19286.126 15879.68 17853.976 15879.68 17261.225 L 15879.68 14668.654 C 15879.68 14001.875 15634.08 12742.514 15634.08 12742.514 L 13732.502 12742.504 Z" transform="matrix(0, 1.000012, -0.999988, 0, 30832.576673, 1220.410164)"/>
+                                  <path class="fil0 str0 fieldcar" d="M 17101.889 16265.982 C 17857.599 16181.662 18611.999 16043.822 19009.419 15879.252 C 19727.949 15581.731 21372.708 14694.791 21664.608 14599.371 C 22063.168 14475.882 22388.758 14475.882 23067.997 14251.332 C 23741.618 14026.791 23517.077 13673.151 23517.077 13673.151 L 23371.117 13706.821 L 23270.077 12780.6 C 23270.077 12780.6 23545.147 12797.44 23618.118 12544.83 C 23696.708 12297.831 23719.158 11994.691 23567.597 11820.681 C 23421.637 11646.661 23314.987 11843.131 23242.007 11596.141 C 23169.037 11343.531 23191.487 11090.92 22764.857 11118.99 C 22338.238 11147.06 21035.909 11118.99 21035.909 11118.99 C 21035.909 11118.99 20760.838 13021.97 19306.939 12971.45 C 17853.039 12920.93 17628.509 11118.99 17628.509 11118.99 C 17495.099 11118.99 17373.319 11118.96 17240.359 11118.91 L 17274.579 11287.481 L 17329.209 11472.621 L 17395.719 11675.881 L 17478.279 11898.431 L 17653.699 12281.161 L 17865.599 12618.54 L 18048.84 12830.62 L 18254.85 13006.65 L 18461.349 13137.151 L 18689.129 13260.691 L 18953.289 13457.081 L 19028.039 13593.371 L 19044.959 13711.721 L 19030.449 13836.221 L 18985.649 13979.671 L 18835.129 14272.322 L 18228.41 15113.901 L 17926.369 15470.551 L 17602.199 15825.151 L 17272.839 16132.072 L 17101.889 16265.982 Z" transform="matrix(0, 1.000012, -0.999988, 0, 34081.934241, -6699.525781)"/>
+                                  <path class="fil0 str0 fieldcar" d="M 6020.512 11116.848 C 6776.222 11201.169 7530.623 11339.009 7928.041 11503.579 C 8646.571 11801.098 10291.332 12688.039 10583.232 12783.459 C 10981.79 12906.949 11307.38 12906.949 11986.62 13131.499 C 12660.24 13356.039 12435.7 13709.679 12435.7 13709.679 L 12289.74 13676.009 L 12188.7 14602.229 C 12188.7 14602.229 12463.77 14585.389 12536.74 14837.999 C 12615.33 15084.999 12637.78 15388.14 12486.22 15562.15 C 12340.26 15736.17 12233.61 15539.7 12160.63 15786.69 C 12087.66 16039.299 12110.11 16291.909 11683.48 16263.839 C 11256.86 16235.769 9954.531 16263.839 9954.531 16263.839 C 9954.531 16263.839 9679.461 14360.859 8225.561 14411.379 C 6771.662 14461.899 6547.132 16263.839 6547.132 16263.839 C 6413.722 16263.839 6291.942 16263.869 6158.982 16263.919 L 6193.202 16095.349 L 6247.832 15910.209 L 6314.342 15706.95 L 6396.902 15484.4 L 6572.322 15101.669 L 6784.222 14764.289 L 6967.462 14552.209 L 7173.472 14376.179 L 7379.972 14245.679 L 7607.753 14122.139 L 7871.912 13925.748 L 7946.661 13789.458 L 7963.581 13671.109 L 7949.071 13546.609 L 7904.272 13403.159 L 7753.753 13110.509 L 7147.032 12268.928 L 6844.992 11912.278 L 6520.822 11557.679 L 6191.462 11250.759 L 6020.512 11116.848 Z" transform="matrix(0, 1.000012, -0.999988, 0, 23000.555579, 4381.987354)"/>
+                                  <path data-name="Sağ Ön Kapı" id="sag-on-kapi" class="fil0 str0 fieldcar" d="M 18329.933 5901.561 C 18605.702 6227.32 20494.302 7331.59 20986.362 7455.261 C 21503.861 7585.251 22793.21 7580.521 22793.21 7580.521 L 22667.96 5901.551 L 18329.933 5901.561 Z M 18090.133 2543.68 C 19737.531 2543.68 21386.211 2543.68 23033.61 2543.68 C 22984.23 2765.58 22929.03 3128.09 22886.2 3484.44 C 22843.37 3840.78 22812.87 4190.999 22812.87 4388.349 C 22833.39 5021.63 22856.37 5591.751 22920.75 5919.801 C 22964.08 6360.11 23007.39 7680.241 23031.95 7779.001 C 22175.511 7781.021 21165.312 7767.261 20610.612 7556.571 C 20610.612 7556.571 18831.122 6579.81 18202.413 6175.651 C 18146.273 6136.351 18075.033 6097.531 18003.033 6067.521 C 17754.453 5524.971 17678.313 4809.11 17677.163 4414.049 C 17676.003 4019 17769.833 2790.22 18090.143 2543.69 L 18090.133 2543.68 Z M 21785.991 5133.891 L 22407.331 5133.891 C 22435.751 5133.901 22458.791 5076.781 22458.791 5006.36 L 22458.791 5006.35 C 22458.791 4935.93 22435.751 4878.81 22407.341 4878.81 L 21785.991 4878.81 C 21757.591 4878.81 21734.551 4935.93 21734.551 5006.36 L 21734.541 5006.35 C 21734.551 5076.781 21757.591 5133.901 21786.001 5133.901 L 21785.991 5133.891 Z" transform="matrix(0, 1.000012, -0.999988, 0, 25516.738493, -15194.211622)"/>
+                                  <path data-name="Sol Ön Kapı" id="sol-on-kapi" class="fil0 str0 fieldcar" d="M 7319.169 4421.284 C 7594.939 4095.524 9483.537 2991.253 9975.598 2867.583 C 10493.098 2737.593 11782.447 2742.323 11782.447 2742.323 L 11657.197 4421.294 L 7319.169 4421.284 Z M 7079.369 7779.164 C 8726.768 7779.164 10375.448 7779.164 12022.847 7779.164 C 11973.467 7557.264 11918.267 7194.754 11875.437 6838.404 C 11832.607 6482.065 11802.107 6131.844 11802.107 5934.494 C 11822.627 5301.213 11845.607 4731.093 11909.987 4403.044 C 11953.317 3962.734 11996.627 2642.602 12021.187 2543.842 C 11164.747 2541.822 10154.548 2555.582 9599.847 2766.273 C 9599.847 2766.273 7820.359 3743.034 7191.649 4147.194 C 7135.509 4186.494 7064.269 4225.314 6992.268 4255.324 C 6743.688 4797.873 6667.548 5513.734 6666.398 5908.794 C 6665.238 6303.844 6759.068 7532.624 7079.379 7779.154 L 7079.369 7779.164 Z M 10775.228 5188.953 L 11396.567 5188.953 C 11424.987 5188.943 11448.027 5246.063 11448.027 5316.483 L 11448.027 5316.493 C 11448.027 5386.913 11424.987 5444.033 11396.577 5444.033 L 10775.228 5444.033 C 10746.828 5444.033 10723.788 5386.913 10723.788 5316.483 L 10723.778 5316.493 C 10723.788 5246.063 10746.828 5188.943 10775.238 5188.943 L 10775.228 5188.953 Z" transform="matrix(0, 1.000012, -0.999988, 0, 14505.975065, -4183.310691)"/>
+                                  <path data-name="Sağ Arka Kapı" id="sag-arka-kapi" class="fil0 str0" d="M 18421.195 12374.638 L 18345.925 10720.057 L 21980.515 10720.057 C 21782.284 11084.058 21163.044 12033.979 20701.685 12273.768 C 20450.835 12449.198 19248.126 12349.728 18421.195 12374.638 Z M 20773.615 12509.538 C 21094.634 12287.288 21768.244 11602.799 22410.295 10664.457 C 23052.344 9726.118 22557.644 9627.348 22089.275 9355.808 C 21619.144 9084.078 21221.684 8596.368 20900.675 7362.457 C 20006.795 7362.097 19107.586 7362.547 18210.756 7362.547 C 18161.376 7584.447 18106.176 7946.956 18063.346 8303.307 C 18020.516 8659.658 17990.016 9009.868 17990.016 9207.218 C 18010.536 9840.498 18033.516 10410.617 18097.896 10738.667 C 18141.226 11178.978 18184.536 12499.108 18209.096 12597.868 C 18561.265 12597.048 18885.955 12593.548 19144.636 12599.968 C 19676.316 12613.188 20245.345 12568.488 20773.615 12509.538 Z M 21481.834 9952.748 L 22103.175 9952.758 C 22131.585 9952.768 22154.625 9895.648 22154.625 9825.228 L 22154.635 9825.218 C 22154.625 9754.798 22131.585 9697.678 22103.175 9697.678 L 21481.834 9697.678 C 21453.424 9697.678 21430.384 9754.798 21430.384 9825.228 L 21430.384 9825.218 C 21430.384 9895.648 21453.424 9952.748 21481.834 9952.748 Z" transform="matrix(0, 1.000012, -0.999988, 0, 30335.536872, -10371.294849)"/>
+                                  <path data-name="Sol Arka Kapı" id="sol-arka-kapi" class="fil0 str0" d="M 7414.493 7589.979 L 7339.223 9244.56 L 10973.81 9244.56 C 10775.58 8880.56 10156.342 7930.639 9694.981 7690.849 C 9444.131 7515.419 8241.421 7614.889 7414.493 7589.979 Z M 9766.911 7455.079 C 10087.932 7677.329 10761.54 8361.82 11403.59 9300.16 C 12045.64 10238.5 11550.94 10337.27 11082.57 10608.81 C 10612.442 10880.541 10214.982 11368.251 9893.971 12602.161 C 9000.091 12602.521 8100.881 12602.071 7204.052 12602.071 C 7154.672 12380.171 7099.472 12017.66 7056.642 11661.31 C 7013.812 11304.961 6983.312 10954.751 6983.312 10757.4 C 7003.832 10124.12 7026.812 9554 7091.192 9225.95 C 7134.522 8785.64 7177.832 7465.509 7202.392 7366.749 C 7554.563 7367.569 7879.253 7371.069 8137.931 7364.649 C 8669.611 7351.429 9238.641 7396.129 9766.911 7455.079 Z M 10475.132 10011.87 L 11096.47 10011.86 C 11124.88 10011.85 11147.92 10068.97 11147.92 10139.39 L 11147.93 10139.4 C 11147.92 10209.82 11124.88 10266.94 11096.47 10266.94 L 10475.132 10266.94 C 10446.722 10266.94 10423.682 10209.82 10423.682 10139.39 L 10423.682 10139.4 C 10423.682 10068.97 10446.722 10011.87 10475.132 10011.87 Z" transform="matrix(0, 1.000012, -0.999988, 0, 19328.832038, 635.545485)"/>
+                                  <path id="sag-arka-kelebek" class="fil4 str0" d="M 17099.493 13525.597 C 17099.493 13525.597 18502.873 12046.966 18602.863 11996.966 C 18702.853 11946.796 20632.502 11971.876 20632.502 11971.876 C 20632.502 11971.876 19280.002 12798.816 18829.162 12999.326 C 18378.323 13199.827 17250.363 13550.686 17099.493 13525.597 Z" transform="matrix(0, 1.000012, -0.999988, 0, 31612.079262, -6119.990762)"/>
+                                  <path id="sol-arka-kelebek" class="fil4 str0" d="M 9067.501 11966.884 C 9067.501 11966.884 10470.88 13445.514 10570.87 13495.514 C 10670.86 13545.684 12600.509 13520.604 12600.509 13520.604 C 12600.509 13520.604 11248.009 12693.663 10797.169 12493.153 C 10346.33 12292.653 9218.371 11941.794 9067.501 11966.884 Z" transform="matrix(0, 1.000012, -0.999988, 0, 23580.086586, 1912.100529)"/>
+                                  <path id="sag-on-teker" class="fil3 str0" d="M 23981.228 458.072 C 23981.248 -278.198 23384.137 -875.309 22647.847 -875.309 C 21911.567 -875.309 21314.459 -278.208 21314.459 458.082 C 21314.459 1194.362 21911.557 1791.471 22647.847 1791.471 C 23384.127 1791.471 23981.248 1194.372 23981.248 458.082 L 23981.228 458.072 Z" transform="matrix(0, 1.000012, -0.999988, 0, 23105.928829, -22190.053341)"/>
+                                  <path id="sol-on-teker" class="fil3 str0" d="M 8385.515 458.088 C 8385.535 1194.358 7788.425 1791.469 7052.136 1791.469 C 6315.856 1791.469 5718.746 1194.368 5718.746 458.078 C 5718.746 -278.202 6315.846 -875.312 7052.136 -875.312 C 7788.415 -875.312 8385.535 -278.212 8385.535 458.078 L 8385.515 458.088 Z" transform="matrix(0, 1.000012, -0.999988, 0, 7510.213436, -6594.149576)"/>
+                                  <path id="sag-arka-teker" class="fil3 str0" d="M 23981.233 12642.033 C 23981.243 11905.763 23384.143 11308.652 22647.853 11308.652 C 21911.575 11308.652 21314.464 11905.753 21314.464 12642.043 C 21314.464 13378.323 21911.565 13975.433 22647.853 13975.433 C 23384.133 13975.433 23981.243 13378.333 23981.243 12642.043 L 23981.233 12642.033 Z" transform="matrix(0, 1.000012, -0.999988, 0, 35289.739245, -10006.091854)"/>
+                                  <path id="sol-arka-teker" class="fil3 str0" d="M 8385.524 12642.05 C 8385.534 13378.321 7788.433 13975.431 7052.143 13975.431 C 6315.864 13975.431 5718.755 13378.331 5718.755 12642.04 C 5718.755 11905.761 6315.854 11308.65 7052.143 11308.65 C 7788.423 11308.65 8385.534 11905.751 8385.534 12642.04 L 8385.524 12642.05 Z" transform="matrix(0, 1.000012, -0.999988, 0, 19694.028307, 5589.808554)"/>
+                                  <path data-name="Sağ Ön Çamurluk" id="sag-on-camurluk" class="fil0 str0" d="M 24228.093 -1882.706 L 23492.734 -1882.706 C 23492.734 -1882.706 23391.685 -52.696 21786.214 -30.246 C 20180.756 -2.175 20057.266 -1882.706 20057.266 -1882.706 L 18906.485 -1882.706 L 18580.905 -1209.086 C 18569.675 -1209.086 18120.606 -1209.086 18204.796 -905.956 C 18283.386 -614.046 18165.506 -164.966 18390.046 -86.366 L 18878.425 620.935 C 18878.425 620.935 19479.075 1047.554 20961.035 1199.114 C 22297.054 1333.844 23467.374 1343.604 24140.993 1641.125 C 23892.414 1098.574 23816.274 382.715 23815.124 -12.345 C 23813.964 -407.396 23907.794 -1636.176 24228.103 -1882.706 L 24228.093 -1882.706 Z" transform="matrix(0, 1.000012, -0.999988, 0, 21090.407259, -21332.249821)"/>
+                                  <path data-name="Sol Ön Çamurluk" id="sol-on-camurluk" class="fil0 str0" d="M 11505.698 1641.127 L 10770.338 1641.127 C 10770.338 1641.127 10669.288 -188.884 9063.818 -211.334 C 7458.358 -239.404 7334.868 1641.127 7334.868 1641.127 L 6184.089 1641.127 L 5858.51 967.506 C 5847.28 967.506 5398.21 967.506 5482.4 664.376 C 5560.99 372.466 5443.11 -76.614 5667.65 -155.214 L 6156.029 -862.514 C 6156.029 -862.514 6756.678 -1289.135 8238.639 -1440.695 C 9574.657 -1575.425 10744.978 -1585.185 11418.598 -1882.704 C 11170.018 -1340.155 11093.878 -624.294 11092.728 -229.234 C 11091.568 165.816 11185.398 1394.596 11505.708 1641.127 L 11505.698 1641.127 Z" transform="matrix(0, 1.000012, -0.999988, 0, 8368.013583, -8609.694245)"/>
+                                  <path data-name="Sağ Arka Çamurluk" id="sag-arka-camurluk" class="fil0 str0" d="M 24594.721 15047.474 L 20268.552 15052.384 C 20269.452 14734.273 19949.592 14631.733 19641.142 14452.902 C 19171.012 14181.172 18773.554 13693.463 18452.544 12459.553 C 18585.504 12459.603 18718.684 12459.643 18852.094 12459.643 C 18852.094 12459.643 19076.632 14261.582 20530.523 14312.102 C 21984.431 14362.622 22259.491 12459.643 22259.491 12459.643 C 22259.491 12459.643 23561.822 12487.713 23988.442 12459.643 C 24415.072 12431.573 24392.622 12684.183 24465.592 12936.793 C 24538.561 13183.783 24645.221 12987.313 24791.18 13161.333 C 24942.74 13335.353 24920.29 13638.483 24841.7 13885.483 C 24768.73 14138.082 24493.661 14121.252 24493.661 14121.252 L 24594.721 15047.474 Z" transform="matrix(0, 1.000012, -0.999988, 0, 35432.57945, -7923.134025)"/>
+                                  <path data-name="Sol Arka Çamurluk" id="sol-arka-camurluk" class="fil0 str0" d="M 10939.107 12462.411 L 6612.938 12457.501 C 6613.838 12775.611 6293.978 12878.151 5985.528 13056.981 C 5515.399 13328.711 5117.939 13816.421 4796.929 15050.331 C 4929.889 15050.281 5063.069 15050.241 5196.479 15050.241 C 5196.479 15050.241 5421.019 13248.301 6874.908 13197.781 C 8328.818 13147.261 8603.878 15050.241 8603.878 15050.241 C 8603.878 15050.241 9906.207 15022.171 10332.827 15050.241 C 10759.457 15078.311 10737.007 14825.701 10809.977 14573.091 C 10882.947 14326.101 10989.607 14522.571 11135.567 14348.551 C 11287.127 14174.531 11264.677 13871.401 11186.087 13624.402 C 11113.117 13371.801 10838.047 13388.631 10838.047 13388.631 L 10939.107 12462.411 Z" transform="matrix(0, 1.000012, -0.999988, 0, 21776.964948, 5732.648821)"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>    
+                    <div class="col-md-7">
+                        <div class="row fieldcar">
+                            <div class="col-md-3 fieldcar">Ön Tampon</div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="on-tampon" id="on-tampon-orjinal" value="0" checked>
+                                <label class="fieldcar" for="on-tampon-orjinal">Orjinal</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="on-tampon" id="on-tampon-boyali" value="1">
+                                <label class="fieldcar" for="on-tampon-boyali">Boyalı</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="on-tampon" id="on-tampon-degisti" value="2">
+                                <label class="fieldcar" for="on-tampon-degisti">Değişti</label>
+                            </div>
+                        </div>
+                        <div class="row fieldcar">
+                            <div class="col-md-3 fieldcar">Arka Tampon</div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="arka-tampon" id="arka-tampon-orjinal" value="0" checked>
+                                <label class="fieldcar" for="arka-tampon-orjinal">Orjinal</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="arka-tampon" id="arka-tampon-boyali" value="1">
+                                <label class="fieldcar" for="arka-tampon-boyali">Boyalı</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="arka-tampon" id="arka-tampon-degisti" value="2">
+                                <label class="fieldcar" for="arka-tampon-degisti">Değişti</label>
+                            </div>
+                        </div>
+                        <div class="row fieldcar">
+                            <div class="col-md-3 fieldcar">Kaput</div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="kaput" id="kaput-orjinal" value="0" checked>
+                                <label class="fieldcar" for="kaput-orjinal">Orjinal</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="kaput" id="kaput-boyali" value="1">
+                                <label class="fieldcar" for="kaput-boyali">Boyalı</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="kaput" id="kaput-degisti" value="2">
+                                <label class="fieldcar" for="kaput-degisti">Değişti</label>
+                            </div>
+                        </div>
+                        <div class="row fieldcar">
+                            <div class="col-md-3 fieldcar">Tavan</div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="tavan" id="tavan-orjinal" value="0" checked>
+                                <label class="fieldcar" for="tavan-orjinal">Orjinal</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="tavan" id="tavan-boyali" value="1">
+                                <label class="fieldcar" for="tavan-boyali">Boyalı</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="tavan" id="tavan-degisti" value="2">
+                                <label class="fieldcar" for="tavan-degisti">Değişti</label>
+                            </div>
+                        </div>
+                        <div class="row fieldcar">
+                            <div class="col-md-3 fieldcar">Bagaj Kapağı</div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="bagaj-kapagi" id="bagaj-kapagi-orjinal" value="0" checked>
+                                <label class="fieldcar" for="bagaj-kapagi-orjinal">Orjinal</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="bagaj-kapagi" id="bagaj-kapagi-boyali" value="1">
+                                <label class="fieldcar" for="bagaj-kapagi-boyali">Boyalı</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="bagaj-kapagi" id="bagaj-kapagi-degisti" value="2">
+                                <label class="fieldcar" for="bagaj-kapagi-degisti">Değişti</label>
+                            </div>
+                        </div>
+                        <div class="row fieldcar">
+                            <div class="col-md-3 fieldcar">Sol Ön Çamurluk</div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sol-on-camurluk" id="sol-on-camurluk-orjinal" value="0" checked>
+                                <label class="fieldcar" for="sol-on-camurluk-orjinal">Orjinal</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sol-on-camurluk" id="sol-on-camurluk-boyali" value="1">
+                                <label class="fieldcar" for="sol-on-camurluk-boyali">Boyalı</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sol-on-camurluk" id="sol-on-camurluk-degisti" value="2">
+                                <label class="fieldcar" for="sol-on-camurluk-degisti">Değişti</label>
+                            </div>
+                        </div>
+                        <div class="row fieldcar">
+                            <div class="col-md-3 fieldcar">Sağ Ön Çamurluk</div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sag-on-camurluk" id="sag-on-camurluk-orjinal" value="0" checked>
+                                <label class="fieldcar" for="sag-on-camurluk-orjinal">Orjinal</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sag-on-camurluk" id="sag-on-camurluk-boyali" value="1">
+                                <label class="fieldcar" for="sag-on-camurluk-boyali">Boyalı</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sag-on-camurluk" id="sag-on-camurluk-degisti" value="2">
+                                <label class="fieldcar" for="sag-on-camurluk-degisti">Değişti</label>
+                            </div>
+                        </div>
+                        <div class="row fieldcar">
+                            <div class="col-md-3 fieldcar">Sol Arka Çamurluk</div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sol-arka-camurluk" id="sol-arka-camurluk-orjinal" value="0" checked>
+                                <label class="fieldcar" for="sol-arka-camurluk-orjinal">Orjinal</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sol-arka-camurluk" id="sol-arka-camurluk-boyali" value="1">
+                                <label class="fieldcar" for="sol-arka-camurluk-boyali">Boyalı</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sol-arka-camurluk" id="sol-arka-camurluk-degisti" value="2">
+                                <label class="fieldcar" for="sol-arka-camurluk-degisti">Değişti</label>
+                            </div>
+                        </div>
+                        <div class="row fieldcar">
+                            <div class="col-md-3 fieldcar">Sağ Arka Çamurluk</div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sag-arka-camurluk" id="sag-arka-camurluk-orjinal" value="0" checked>
+                                <label class="fieldcar" for="sag-arka-camurluk-orjinal">Orjinal</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sag-arka-camurluk" id="sag-arka-camurluk-boyali" value="1">
+                                <label class="fieldcar" for="sag-arka-camurluk-boyali">Boyalı</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sag-arka-camurluk" id="sag-arka-camurluk-degisti" value="2">
+                                <label class="fieldcar" for="sag-arka-camurluk-degisti">Değişti</label>
+                            </div>
+                        </div>
+                        <div class="row fieldcar">
+                            <div class="col-md-3 fieldcar">Sol Ön Kapı</div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sol-on-kapi" id="sol-on-kapi-orjinal" value="0" checked>
+                                <label class="fieldcar" for="sol-on-kapi-orjinal">Orjinal</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sol-on-kapi" id="sol-on-kapi-boyali" value="1">
+                                <label class="fieldcar" for="sol-on-kapi-boyali">Boyalı</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sol-on-kapi" id="sol-on-kapi-degisti" value="2">
+                                <label class="fieldcar" for="sol-on-kapi-degisti">Değişti</label>
+                            </div>
+                        </div>
+                        <div class="row fieldcar">
+                            <div class="col-md-3 fieldcar">Sağ Ön Kapı</div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sag-on-kapi" id="sag-on-kapi-orjinal" value="0" checked>
+                                <label class="fieldcar" for="sag-on-kapi-orjinal">Orjinal</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sag-on-kapi" id="sag-on-kapi-boyali" value="1">
+                                <label class="fieldcar" for="sag-on-kapi-boyali">Boyalı</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sag-on-kapi" id="sag-on-kapi-degisti" value="2">
+                                <label class="fieldcar" for="sag-on-kapi-degisti">Değişti</label>
+                            </div>
+                        </div>
+                        <div class="row fieldcar">
+                            <div class="col-md-3 fieldcar">Sol Arka Kapı</div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sol-arka-kapi" id="sol-arka-kapi-orjinal" value="0" checked>
+                                <label class="fieldcar" for="sol-arka-kapi-orjinal">Orjinal</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sol-arka-kapi" id="sol-arka-kapi-boyali" value="1">
+                                <label class="fieldcar" for="sol-arka-kapi-boyali">Boyalı</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sol-arka-kapi" id="sol-arka-kapi-degisti" value="2">
+                                <label class="fieldcar" for="sol-arka-kapi-degisti">Değişti</label>
+                            </div>
+                        </div>
+                        <div class="row fieldcar">
+                            <div class="col-md-3 fieldcar">Sağ Arka Kapı</div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sag-arka-kapi" id="sag-arka-kapi-orjinal" value="0" checked>
+                                <label class="fieldcar" for="sag-arka-kapi-orjinal">Orjinal</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sag-arka-kapi" id="sag-arka-kapi-boyali" value="1">
+                                <label class="fieldcar" for="sag-arka-kapi-boyali">Boyalı</label>
+                            </div>
+                            <div class="col-md-3 fieldcar">
+                                <input class="fieldcar" type="radio" onclick="selectCarPart(name,value)" name="sag-arka-kapi" id="sag-arka-kapi-degisti" value="2">
+                                <label class="fieldcar" for="sag-arka-kapi-degisti">Değişti</label>
+                            </div>
+                        </div>
+                    </div>                    
+                
+        </div>
+    </div> 
+    <script type="text/javascript" >
+        function carpartialselector() {
+            const element = document.querySelector('#car-selector');
+            const info = document.querySelector('.car-part');
+    
+            element.addEventListener(
+                'mouseover',
+                function (event) {
+                if (event.target.tagName === 'path' && event.target.getAttribute('data-name')!== "" && event.target.getAttribute('data-name')!==null) {
+                    
+                    info.innerHTML = [
+                    '<div>',
+                    event.target.getAttribute('data-name'),
+                    '</div>'
+                    ].join('');
+                }
+                }
+            );
+    
+            element.addEventListener(
+                'mousemove',
+                function (event) {
+                info.style.top = event.pageY + 25 + 'px';
+                info.style.left = event.pageX + 'px';
+                }
+            );
+    
+            element.addEventListener(
+                'mouseout',
+                function (event) {
+                info.innerHTML = '';
+                }
+            );
+    
+            element.addEventListener(
+                'click',
+                function (event) {
+                    
+                if (event.target.tagName === 'path' && event.target.getAttribute('data-name')!== "" && event.target.getAttribute('data-name')!==null) {
+                    const id = event.target.getAttribute('id');
+                    //event.target.className += "fil1";
+                    if(event.target.classList.contains('fil0')){
+                    event.target.classList.replace('fil0','fil1');
+                    event.target.classList.replace('str0','str1');
+                    document.getElementById(id+"-boyali").checked = true;
+                    }else if(event.target.classList.contains('fil1')){
+                    event.target.classList.replace('fil1','fil2');
+                    event.target.classList.replace('str1','str2');
+                    document.getElementById(id+"-degisti").checked = true;
+                    }else if(event.target.classList.contains('fil2')){
+                    event.target.classList.replace('fil2','fil0');
+                    event.target.classList.replace('str2','str0');
+                    document.getElementById(id+"-orjinal").checked = true;
+                    }
+                    
+                }
+                }
+            );
+        }
+    
+        function selectCarPart(name,value){
+            document.querySelector('#'+name).classList.remove('fil0','fil1','fil2');
+            document.querySelector('#'+name).classList.add('fil'+value);
+            document.querySelector('#'+name).classList.remove('str0','str1','str2');
+            document.querySelector('#'+name).classList.add('str'+value);
+        }
+        
+        carpartialselector();     					
+    </script> 
+</body>
+</html>
